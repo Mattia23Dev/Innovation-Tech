@@ -39,3 +39,35 @@ function addFadeIn(repeat) {
                 }
             });
         }
+
+ //REQUEST API 
+ /*
+fetch('https://hacker-news.firebaseio.com/v0/newstories.json').then(
+    function (result){
+        return result.json();
+    }
+    ).promise.then( 
+        function (j){
+            console.log(j);
+            let appendi = document.getElementsByTagName('div');
+            let lunghezza = j.length < 10;
+            for(i= 0 ; i < j.length ; i++) {
+                let el = document.createElement('main');
+                el.innerHTML = j[i].title + ' - ' + j[i].body;
+                appendi.appendChild(el);
+            }
+
+    
+        }
+    );
+    */
+
+    let richiesta = new XMLHttpRequest();
+    richiesta.onload = function(){
+        if(richiesta.status === 200){
+            response = JSON.parse(richiesta.responseText);
+            console.log(this.response);
+        }
+    };
+    richiesta.open('GET', 'https://hacker-news.firebaseio.com/v0/newstories.json', true);
+    richiesta.send(null);
