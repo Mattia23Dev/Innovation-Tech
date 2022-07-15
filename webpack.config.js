@@ -17,11 +17,11 @@ module.exports = {
         assetModuleFilename: 'imgs/[hash][ext][query]',
         clean: true,
     },
-    // optimization: {
-    //     minimizer: [
-    //       new CssMinimizerPlugin()
-    //     ],
-    // },
+     optimization: {
+         minimizer: [
+           new CssMinimizerPlugin()
+         ],
+    },
     module: { rules:[
             {
             test: /\.html$/,

@@ -1,7 +1,7 @@
 import '../css/mobile.css';
 import '../css/desktop.css';
 
-import axios from 'axios';
+import { axios } from 'axios';
 import { City } from './city.js';
 import { ShowCity } from './showcity.js';
 const _get = require('lodash/get');

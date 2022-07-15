@@ -31,12 +31,10 @@
         background-color: rgb(230, 230, 230);
         width: 50vw;
     }
-    
-    #skyline-picture {
-        
+    #skyline-picture{
+        width: 60% !important;
         bottom: -1rem;
         left: 3rem;
-        width: 40vw;;
     }
     .total-score-container {
       
