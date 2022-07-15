@@ -1,0 +1,540 @@
+/* Reset Snippet */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 20px;
+    color: rgb(0, 0, 0) !important;
+    background-color: rgba(230,230,230);
+    font-family: 'Akshar', sans-serif;
+    overflow-x: hidden !important;
+}
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 4px !important;
+    box-shadow: 0 0 10px 2px #4b01ac !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #4b01ac !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner-container {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 40vh !important;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: url('../imgs/Cittàmetaverso.jpg') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    box-shadow: 0px 5px 10px rgba(0,0,0, 0.2);
+    z-index: 1;
+}
+
+/* black overlay for emphatize the tile */
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0, 0.2);
+}
+
+.main-title {
+    display: flex;
+    z-index: 1;
+    text-align: center;
+    margin: 2rem;
+    line-height: 6rem;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: rgb(230, 230, 230);
+    text-shadow: 0px 0px 50px rgba(0,0,0, 0.5);
+    z-index: 1;
+}
+
+.search-wrapper {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 3;
+}
+
+.search-box {
+    display: flex;
+    width: 20rem;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: -3vh;
+    box-shadow: 0px 5px 5px rgba(0,0,0, 0.2);
+    background-color: rgba(230,230,230);
+    border-radius: 10px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color ease-in 0.3s;
+}
+
+.x-icon {
+    position: absolute;
+    top: 0.2rem;
+    right: 3rem;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color ease-in 0.3s;
+}
+
+.search-icon:hover{
+    color: rgb(3, 180, 39) !important;
+}
+
+.x-icon:hover{
+    color: rgb(227, 9, 9) !important;
+}
+.search-box input {
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0,0,0, 0.10);
+    background-color: rgb(230, 230, 230);
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.hints-container {
+    max-height: 205px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+#citylist li{
+    list-style: none;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    border-bottom: 1px dotted rgb(209, 208, 208);
+    cursor: default;
+    transition: background-color ease-in 0.1s;
+}
+
+#citylist li:focus {
+    outline: none;
+}
+
+.highlight {
+    background-color: rgb(34, 108, 187) !important;
+}
+
+.citydata-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 0;
+    margin-top: 1rem;
+}
+
+.showcity-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(230, 230, 230);
+    width: 100vw;
+    padding: 3rem 3rem;
+    min-height: 50vh;
+    position: relative;
+}
+
+.city-name h1 {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    text-decoration: none !important;
+}
+
+.city-name h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+   
+}
+
+.city-summary {
+    font-weight: 100;
+    max-width: 80vw;
+}
+
+.city-summary a {
+    text-decoration-color: rgb(34, 103, 187) !important;
+    text-decoration-thickness: 3px;
+    color:rgb(50, 50, 50);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.city-summary a:hover{
+    color: rgb(34, 103, 187) !important;
+    text-decoration: none !important;
+}
+
+#skyline-picture {
+    position: absolute;
+    bottom: -3rem !important;
+    left: -1rem;
+    z-index: 0;
+    width: 90% !important;
+    margin-left: 30px;
+}
+
+
+.city-mayor {
+    margin-top: 1rem;
+    font-weight: 100;
+}
+
+.mayor-score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.total-score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.city-total-score {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'baumans';
+    width: 3rem;
+    text-shadow: 1px 1px 5px rgba(13, 42, 185, 0.3) !important;
+    cursor: default;
+    background: rgb(0, 0, 0) !important;
+    border-radius: 40% !important;
+    color: rgb(230,230,230);
+    box-shadow: 0px 5px 5px rgba(0,0,0, 0.2);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 10px 3px rgb(13, 42, 185) !important;
+}
+
+.score-label {
+    color: rgb(50,50,50);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+.city-scores-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 50vh;
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    font-weight: 100;
+    position: relative;
+}
+
+.city-scores-chart canvas {
+    margin: 2rem 0;
+
+}
+
+.city-scores-chart p {
+    margin: 2rem 0;
+}
+
+#now {
+    text-decoration: underline;
+    text-decoration-color: rgb(34, 187, 139);
+    text-decoration-thickness: 3px;
+    color:rgb(50, 50, 50);
+    font-weight: bold;
+}
+.chart-title {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    text-decoration: none !important;
+}
+
+.cat-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+p{
+    font-family: 'baumans';
+}
+h1{
+    font-family: 'cormorant SC';
+}
+.prechart-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    text-decoration: none !important;
+}
+
+.chart-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.compare-box {
+    display: flex;
+    width: 16rem;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 5px 5px rgba(3, 47, 169, 0.584) !important;
+    background-color: rgba(230,230,230);
+    border-radius: 20px !important;
+    margin-top: 2rem;
+}
+
+#compare-label {
+    position: absolute;
+    top: -2rem;
+    font-size: 1rem;
+}
+
+.compare-icon {
+    position: absolute;
+    top: -0.05rem;
+    right: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color ease-in 0.3s;  
+}
+
+.xc-icon {
+    display: none;
+    position: absolute;
+    top: -0.2rem;
+    right: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color ease-in 0.3s;
+}
+
+.compare-icon i, .xc-icon i {
+    pointer-events: none;
+}
+
+.compare-icon:hover{
+    color: rgb(34, 187, 139);
+}
+
+.xc-icon:hover{
+    color: rgb(227, 49, 9);
+}
+.compare-box input {
+    outline-style: none;
+    position: relative;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(0,0,0, 0.10);
+    background-color: rgb(230, 230, 230);
+}
+
+
+.comp-city-container {
+    max-height: 140px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+#comparelist li {
+    font-size: 1rem;
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    border-bottom: 1px dotted rgb(209, 208, 208);
+    cursor: default;
+    transition: background-color ease-in 0.1s;
+}
+
+#comparelist li:focus {
+    outline: none;
+}
+
+footer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    min-height: 8vh;
+    width: 100vw;
+    background-color: rgb(67, 6, 181) !important;
+    z-index: 2;
+}
+
+@media only screen and (min-width: 700px) {
+
+    .main-title {
+    
+        font-size: 4.5rem;
+    }    
+    
+    .search-box {
+        width: 22rem;
+    }
+    
+    .search-box input {
+        font-size: 1.2rem;
+    }
+    
+    .showcity-container {
+        padding-bottom: 2rem;
+    }
+    
+    #skyline-picture {
+        position: absolute;
+        bottom: -4rem;
+    }
+    
+    .city-scores-chart {
+        padding-top: 5rem;
+    }
+    
+    .city-scores-chart canvas {
+        margin: 4rem;
+        max-height: 400px;
+    
+    }
+
+    .search-icon {
+        top: 0.5rem;
+        right: 1rem;
+    }
+    
+    .x-icon {
+        top: 0.3rem;
+        right: 3rem;
+    }
+    
+    }
+
+@media only screen and (min-width: 1000px) {
+
+        .main-title {
+        
+            font-size: 5.5rem;
+        }    
+        
+        .search-box {
+            width: 23rem;
+        }
+        
+        .search-box input {
+            font-size: 1.3rem;
+        }
+        
+        .showcity-container {
+            padding-bottom: 3rem;
+        }
+        
+        #skyline-picture {
+            position: absolute;
+            bottom: -5rem;
+        }
+        
+        .city-scores-chart {
+            padding-top: 6rem;
+        }
+        
+        .city-scores-chart canvas {
+            margin: 4rem;
+            max-height: 400px;
+        
+        }
+
+        .search-icon {
+            top: 0.6rem;
+            right: 1rem;
+        }
+        
+        .x-icon {
+            top: 0.4rem;
+            right: 3rem;
+        }
+        
+        }

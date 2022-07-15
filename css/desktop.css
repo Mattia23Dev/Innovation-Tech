@@ -1,0 +1,94 @@
+@media only screen and (min-width: 1200px) {
+
+    .main-title {
+    
+        font-size: 8rem;
+        line-height: 7rem;
+    }    
+    
+    .search-box {
+        width: 25rem;
+    }
+    
+    .search-box input {
+        font-size: 1.5rem;
+    }
+    
+    .showcity-container {
+        padding-bottom: 3rem;
+    }
+
+    .citydata-wrapper {
+        flex-direction: row;
+    }
+
+    .city-summary {
+        font-weight: 100;
+        max-width: 40vw;
+    }
+    .city-summary > p {
+        margin-bottom: 130px !important;
+    }
+
+    .showcity-container {
+        background-color: rgb(230, 230, 230);
+        width: 50vw;
+    }
+    #skyline-picture{
+        width: 300px !important;
+        bottom: -1rem !important;
+        left: 2rem !important;
+    }
+    .total-score-container {
+      
+        align-items:flex-end;
+        margin-right: 2rem;
+    }
+
+    .city-scores-chart {
+        width: 50vw;
+        padding-left: 0;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        align-items: flex-start;
+    }
+
+
+    .cat-logos {
+        width: 40vw;
+
+    }
+    
+    .city-scores-chart canvas {
+        margin: 0;
+        margin-top: 1rem;
+        max-height: 400px;
+    }
+
+    .compare-box {
+        position: absolute;
+        right: 4rem;
+        top: 1rem;
+    }
+
+    .search-icon {
+        top: 0.7rem;
+        right: 1rem;
+    }
+    
+    .x-icon {
+        top: 0.5rem;
+        right: 3rem;
+    }
+    footer {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        font-weight: 100;
+        min-height: 8vh;
+        width: 100vw;
+        background-color: rgb(67, 6, 181) !important;
+        z-index: 2;
+    }
+    }
