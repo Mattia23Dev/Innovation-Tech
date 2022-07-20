@@ -1,4 +1,4 @@
-# Best Cities To Live :house_with_garden:
+# Innovation Tech:
 With this simple page, you can search for a city, in a database that includes the best cities in the world, to evaluate its characteristics and choose your next place where you are going to live.
 
 ## :question: Why
@@ -39,7 +39,7 @@ After the installation, you're ready to go.
 
 ## :zap:  Try it!
 Elsewhere, you can simply try it here:
-[Best Cities To Live](https://innovation-tech.netlify.app/)
+[Innovation Tech](https://innovation-tech.netlify.app/)
 
 ## :e-mail: Contact Me
 Any questions? Send me an e-mail here: mattianoris23@gmail.com
