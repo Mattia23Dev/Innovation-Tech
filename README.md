@@ -37,24 +37,10 @@ If you don't have it, you can download it here:
 [Node.js](https://nodejs.org/it/download/)<br>
 After the installation, you're ready to go.
 
-### 1 - Clone the repository
-`git clone https://github.com/cristopherturazza/S2I-JS-Advanced`
-### 2 - Install the dependencies
-`npm install`
-### 3 - Build it!
-`npm run build`
-
-### 4 - Open in the browser
-Check out for index.html in the /dist folder.
-
-
 ## :zap:  Try it!
 Elsewhere, you can simply try it here:
-[Best Cities To Live](https://bestcitiestolive.netlify.app/)
-## :page_with_curl:  License
-[MIT](https://choosealicense.com/licenses/mit/)
+[Best Cities To Live](https://innovation-tech.netlify.app/)
 
 ## :e-mail: Contact Me
-Any questions? Send me an e-mail here: cristopherturazza@gmail.com <br>
-You can find my Linkedin profile here: https://www.linkedin.com/in/cristopher-turazza-0863a026/
+Any questions? Send me an e-mail here: mattianoris23@gmail.com
 
