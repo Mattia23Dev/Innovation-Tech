@@ -6,9 +6,7 @@ This project is the final practice for start2impact Javascript Advanced course.<
 Created in the early 2022, this is my second JS project.
 
 ## :bulb: How it works
-Start writing the city you are looking for in the main search bar and check the cities available in the suggestions.
-
-<img src="https://user-images.githubusercontent.com/82518387/165903289-7a45d4e9-f3ed-4e48-8c53-c3b026b91211.png" width="50%" height="50%">
+Start writing the city you are looking for in the main search bar and check the cities available in the suggestions. <br> <br>
 
 Once selected you can start the search and you will see a photo, description and scores of the searched city in a simple nice graph. <br>
 If you want to compare the scores with those of another city, you can select one to add to the graph and make your comparison.
